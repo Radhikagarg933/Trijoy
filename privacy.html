@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TriJoys — Privacy Policy</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root{
+      --cream:#FFF8E7;
+      --sun:#FFE69C;
+      --ink:#1B1607;
+      --ink-soft:#5A4F33;
+      --yellow:#FFC107;
+      --yellow-deep:#E8920C;
+      --orange:#FF7A29;
+
+      --blue:#4DA8FF;
+      --pink:#FF5C7A;
+      --teal:#2EC4B6;
+
+      --card:#FFFFFF;
+      --line:rgba(27,22,7,0.10);
+      --shadow:0 8px 22px rgba(27,22,7,0.08);
+      --shadow-sm:0 4px 10px rgba(27,22,7,0.10);
+
+      --display:"Baloo 2", system-ui, sans-serif;
+      --body:"Poppins", system-ui, sans-serif;
+    }
+
+    *{ box-sizing:border-box; }
+
+    body{
+      margin:0;
+      font-family:var(--body);
+      background:var(--cream);
+      color:var(--ink);
+      min-height:100vh;
+    }
+
+    .container{
+      width:min(1080px, 92vw);
+      margin:0 auto;
+    }
+
+    /* ===================== NAVBAR ===================== */
+   header{
+  padding: 18px 0;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  backdrop-filter: blur(10px);
+  background: linear-gradient(
+    to bottom,
+    rgba(255,253,248,.85),
+    rgba(255,253,248,.55)
+  );
+  border-bottom: 1px solid rgba(17,17,17,.06);
+}
+
+.nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+}
+
+.logo{
+  font-family: 'Baloo 2', cursive;
+  font-size: 2rem;
+  font-weight: 900;
+  text-decoration: none;
+  color: #111;
+}
+
+.logo span{
+  color: #F8C537;
+}
+
+.menu{
+  display: flex;
+  gap: 28px;
+  align-items: center;
+}
+
+.menu a{
+  text-decoration: none;
+  font-weight: 700;
+  color: rgba(0,0,0,.72);
+  padding: 10px 12px;
+  border-radius: 999px;
+  transition: transform .15s ease, background .15s ease;
+}
+
+.menu a:hover{
+  background: rgba(248,197,55,.18);
+  transform: translateY(-1px);
+}
+
+.cta-btn{
+  padding: 14px 22px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #F8C537;
+  color: #111;
+  border: 1px solid rgba(0,0,0,.05);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.cta-btn:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(0,0,0,.08);
+}
+    /* ===================== HERO ===================== */
+    .hero{
+      position:relative;
+      padding:72px 0 40px;
+      text-align:center;
+      overflow:hidden;
+      background:
+        radial-gradient(ellipse at 14% 0%, rgba(255,193,7,0.25), transparent 55%),
+        radial-gradient(ellipse at 86% 20%, rgba(255,122,41,0.15), transparent 55%);
+    }
+
+    .hero .container{ position:relative; }
+
+    .title{
+      margin:0 0 14px;
+      font-family:var(--display);
+      font-weight:800;
+      font-size:clamp(56px, 9vw, 104px);
+      line-height:1.02;
+      color:var(--ink);
+    }
+    .title .accent{ color:var(--yellow-deep); }
+
+    .title .letter{
+      display:inline-block;
+      animation:letter-float 3.2s ease-in-out infinite;
+      will-change:transform;
+    }
+
+    @keyframes letter-float{
+      0%, 100%{ transform:translateY(0) rotate(0deg); }
+      50%{ transform:translateY(-10px) rotate(-3deg); }
+    }
+
+    .subtitle{
+      margin:0 auto;
+      max-width:560px;
+      font-size:15.5px;
+      font-weight:500;
+      color:var(--ink-soft);
+    }
+
+    .star-accent{
+      position:absolute;
+      top:8px;
+      right:6%;
+      width:60px;
+      transform:rotate(12deg);
+    }
+    .sparkle-deco{
+      position:absolute;
+      color:var(--orange);
+    }
+
+    @media (max-width:600px){
+      .star-accent{ display:none; }
+    }
+
+    /* ===================== ACCORDION ===================== */
+    main.content{
+      padding:30px 0 50px;
+    }
+
+    .accordion{
+      display:flex;
+      flex-direction:column;
+      gap:14px;
+      margin-top:8px;
+    }
+
+    .acc-card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:18px;
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+
+    .acc-header{
+      width:100%;
+      display:grid;
+      grid-template-columns:44px 1fr 38px;
+      align-items:center;
+      gap:14px;
+      padding:18px 18px;
+      cursor:pointer;
+      background:transparent;
+      border:0;
+      text-align:left;
+      font:inherit;
+      color:inherit;
+    }
+
+    .icon-square{
+      width:42px;
+      height:42px;
+      border-radius:12px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      box-shadow:var(--shadow-sm);
+    }
+
+    .icon-square svg{
+      width:21px;
+      height:21px;
+      fill:none;
+      stroke:#fff;
+      stroke-width:2.2;
+      stroke-linecap:round;
+      stroke-linejoin:round;
+    }
+
+    .acc-title{
+      font-family:var(--display);
+      font-weight:700;
+      font-size:18px;
+      letter-spacing:0.2px;
+      color:var(--ink);
+    }
+
+    .toggle{
+      width:34px;
+      height:34px;
+      border-radius:50%;
+      background:var(--cream);
+      border:1px solid var(--line);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:800;
+      font-size:17px;
+      color:var(--ink);
+      box-shadow:0 4px 10px rgba(27,22,7,0.12);
+      animation:float-bob 2.6s ease-in-out infinite;
+      transition:background .15s ease, transform .45s cubic-bezier(.34,1.56,.64,1);
+    }
+    .acc-header:hover .toggle{
+      animation-play-state:paused;
+      transform:translateY(-3px) scale(1.08);
+    }
+    .acc-card.open .toggle{
+      background:var(--yellow);
+      transform:rotate(180deg);
+    }
+    .acc-card.open .toggle:hover{
+      transform:rotate(180deg) translateY(-3px) scale(1.08);
+    }
+
+    @keyframes float-bob{
+      0%, 100%{ transform:translateY(0); }
+      50%{ transform:translateY(-4px); }
+    }
+    .acc-card.open .toggle{ animation:none; }
+
+    .acc-body{
+      overflow:hidden;
+      height:0;
+      transition:height 380ms cubic-bezier(.34,1.2,.64,1);
+      border-top:1px solid var(--line);
+    }
+
+    .acc-body-inner{
+      padding:16px 18px 20px 74px;
+      font-size:14.5px;
+      font-weight:400;
+      line-height:1.6;
+      color:var(--ink-soft);
+    }
+
+    .closing-note{
+      margin-top:20px;
+      padding:18px 20px;
+      border:1px solid var(--line);
+      border-radius:18px;
+      background:var(--sun);
+      box-shadow:var(--shadow);
+      font-weight:600;
+      font-size:14.5px;
+      line-height:1.6;
+      color:var(--ink);
+      text-align:center;
+    }
+
+    @media (max-width:480px){
+      .acc-title{ font-size:16px; }
+      .acc-header{ grid-template-columns:38px 1fr 34px; padding:15px 14px; }
+      .acc-body-inner{ padding-left:60px; }
+    }
+
+    /* ===================== FOOTER ===================== */
+    footer{
+      position:relative;
+      background:
+        radial-gradient(ellipse at 10% 0%, rgba(255,193,7,0.30), transparent 55%),
+        radial-gradient(ellipse at 90% 100%, rgba(255,122,41,0.20), transparent 55%),
+        linear-gradient(180deg, var(--sun) 0%, var(--cream) 100%);
+      color:var(--ink);
+      overflow:hidden;
+      padding-top:36px;
+    }
+
+    .footer-top{
+      display:flex;
+      flex-wrap:wrap;
+      align-items:flex-start;
+      gap:24px;
+      justify-content:space-between;
+      padding-bottom:26px;
+      position:relative;
+      z-index:2;
+    }
+
+    .footer-brand{ max-width:260px; }
+    .footer-note{
+      margin-top:6px;
+      font-size:13px;
+      line-height:1.5;
+      color:var(--ink-soft);
+    }
+
+    .footer-bottom{
+      position:relative;
+      border-top:1px dashed rgba(232,146,12,0.35);
+      padding:12px 0 24px;
+      text-align:center;
+      font-size:11.5px;
+      color:var(--ink-soft);
+      z-index:2;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+  <div class="container nav">
+    <a href="index.html" class="logo">Tri<span>Joys</span></a>
+
+    <nav class="menu" role="navigation">
+      <a href="index.html#games">Our Games</a>
+      <a href="index.html#why">Why Trijoys</a>
+      <a href="index.html#about-founder">Our Team</a>
+      <a href="index.html#stats-section">Our Journey</a>
+    </nav>
+
+    <a href="index.html#contact-form" class="cta-btn">Get in Touch →</a>
+  </div>
+</header>
+
+  <section class="hero">
+    <div class="container">
+      <svg class="sparkle-deco" style="top:18px; left:8%; width:16px;" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0l2 8 8 2-8 2-2 8-2-8-8-2 8-2z"/></svg>
+
+      <svg class="star-accent" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M50 6 L60 34 L90 34 L65 52 L75 84 L50 66 L25 84 L35 52 L10 34 L40 34 Z" fill="#FFC107" stroke="#1B1607" stroke-width="5" stroke-linejoin="round"/>
+      </svg>
+
+      <h1 class="title" data-floaty-title>Privacy <span class="accent">Policy.</span></h1>
+      <p class="subtitle">We care about games, not your data.</p>
+    </div>
+  </section>
+
+  <main class="content">
+    <div class="container">
+      <div class="accordion">
+
+        <!-- 1 -->
+        <section class="acc-card open" data-acc>
+          <button class="acc-header" type="button" aria-expanded="true">
+            <div class="icon-square" style="background:var(--blue)">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M20 21a8 8 0 0 0-16 0"/>
+                <circle cx="12" cy="8" r="4"/>
+              </svg>
+            </div>
+            <div class="acc-title">What we collect</div>
+            <div class="toggle" aria-hidden="true"><span>−</span></div>
+          </button>
+          <div class="acc-body">
+            <div class="acc-body-inner">
+              If you use our contact form, we collect your name and email address.
+            </div>
+          </div>
+        </section>
+
+        <!-- 2 -->
+        <section class="acc-card" data-acc>
+          <button class="acc-header" type="button" aria-expanded="false">
+            <div class="icon-square" style="background:var(--orange)">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 6h16v12H4z"/>
+                <path d="M4 7l8 6 8-6"/>
+              </svg>
+            </div>
+            <div class="acc-title">Why we collect it</div>
+            <div class="toggle" aria-hidden="true"><span>+</span></div>
+          </button>
+          <div class="acc-body">
+            <div class="acc-body-inner">
+              We use this information only to respond to your messages and questions.
+            </div>
+          </div>
+        </section>
+
+        <!-- 3 -->
+        <section class="acc-card" data-acc>
+          <button class="acc-header" type="button" aria-expanded="false">
+            <div class="icon-square" style="background:var(--yellow-deep)">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 2l8 4v6c0 5-3 9-8 10C7 21 4 17 4 12V6l8-4z"/>
+                <path d="M9 12l2 2 4-5"/>
+              </svg>
+            </div>
+            <div class="acc-title">Who we share it with</div>
+            <div class="toggle" aria-hidden="true"><span>+</span></div>
+          </button>
+          <div class="acc-body">
+            <div class="acc-body-inner">
+              We don't sell or share your data with third parties. Ever.
+            </div>
+          </div>
+        </section>
+
+        <!-- 4 -->
+        <section class="acc-card" data-acc>
+          <button class="acc-header" type="button" aria-expanded="false">
+            <div class="icon-square" style="background:var(--pink)">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 19V5"/>
+                <path d="M8 19V9"/>
+                <path d="M12 19V12"/>
+                <path d="M16 19V7"/>
+                <path d="M20 19V10"/>
+              </svg>
+            </div>
+            <div class="acc-title">Analytics</div>
+            <div class="toggle" aria-hidden="true"><span>+</span></div>
+          </button>
+          <div class="acc-body">
+            <div class="acc-body-inner">
+              We may use basic, anonymous analytics to understand how people use our site — no personal data involved.
+            </div>
+          </div>
+        </section>
+
+        <!-- 5 -->
+        <section class="acc-card" data-acc>
+          <button class="acc-header" type="button" aria-expanded="false">
+            <div class="icon-square" style="background:var(--teal)">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 14a4 4 0 1 1 3-6"/>
+                <path d="M10 8l11-1-1 4-4 1-1 3-3 1-2-3"/>
+              </svg>
+            </div>
+            <div class="acc-title">Your controls</div>
+            <div class="toggle" aria-hidden="true"><span>+</span></div>
+          </button>
+          <div class="acc-body">
+            <div class="acc-body-inner">
+              You can request changes or deletion of your contact info anytime by reaching out through our Contact page.
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+      <div class="closing-note">
+        Got a question, idea, or just want to say hi? Use the <strong>Get In Touch</strong> section and we'll get back to you.
+      </div>
+    </div>
+  </main>
+
+  <footer id="contact" aria-label="Footer">
+    <div class="container footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">Tri<span>Joys</span></a>
+        <p class="footer-note">Fun mobile games made with joy.<br>© <span id="year">2026</span> TriJoys. All rights reserved.</p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      Made with ❤️ by the TriJoys team
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Split the hero title into individual letters with staggered floaty delays
+    (function(){
+      const title = document.querySelector('[data-floaty-title]');
+      if(!title) return;
+
+      function wrapLetters(node){
+        const text = node.textContent;
+        node.textContent = '';
+        [...text].forEach((ch) => {
+          if(ch === ' '){
+            node.appendChild(document.createTextNode(' '));
+            return;
+          }
+          const span = document.createElement('span');
+          span.className = 'letter';
+          span.textContent = ch;
+          span.style.animationDelay = (Math.random() * 1.2).toFixed(2) + 's';
+          node.appendChild(span);
+        });
+      }
+
+      // wrap plain text node(s) and the accent span separately so colors are preserved
+      const accent = title.querySelector('.accent');
+      const beforeText = title.firstChild; // text node before the accent span
+      const beforeWrap = document.createElement('span');
+      beforeWrap.appendChild(beforeText.cloneNode());
+      title.replaceChild(beforeWrap, beforeText);
+      wrapLetters(beforeWrap);
+      if(accent) wrapLetters(accent);
+    })();
+
+    // Smooth height accordion (multiple open allowed)
+    (function(){
+      const cards = document.querySelectorAll('[data-acc]');
+
+      function setOpen(card, open){
+        const headerBtn = card.querySelector('.acc-header');
+        const body = card.querySelector('.acc-body');
+        const toggle = card.querySelector('.toggle span');
+
+        headerBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+
+        if(open){
+          card.classList.add('open');
+          const inner = body.querySelector('.acc-body-inner');
+          const h = inner.getBoundingClientRect().height;
+          body.style.height = h + 'px';
+          toggle.textContent = '−';
+        } else {
+          card.classList.remove('open');
+          body.style.height = '0px';
+          toggle.textContent = '+';
+        }
+      }
+
+      function init(){
+        cards.forEach(card => {
+          const initiallyOpen = card.classList.contains('open');
+          const body = card.querySelector('.acc-body');
+          body.style.height = initiallyOpen ? (card.querySelector('.acc-body-inner').getBoundingClientRect().height + 'px') : '0px';
+        });
+      }
+
+      cards.forEach(card => {
+        const headerBtn = card.querySelector('.acc-header');
+        headerBtn.addEventListener('click', () => {
+          const open = card.classList.contains('open');
+          setOpen(card, !open);
+        });
+      });
+
+      window.addEventListener('resize', () => {
+        cards.forEach(card => {
+          if(card.classList.contains('open')){
+            const body = card.querySelector('.acc-body');
+            const inner = card.querySelector('.acc-body-inner');
+            body.style.height = inner.getBoundingClientRect().height + 'px';
+          }
+        });
+      });
+
+      requestAnimationFrame(init);
+    })();
+  </script>
+
+</body>
+</html>
